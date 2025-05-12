@@ -1,0 +1,62 @@
+// Declare pointers to 2 linked lists one for stack a and one for stack b.
+	// set to pointers to NULL
+
+// Handle arguments errors
+	// if error, return ;
+
+// Initalize stack A  ....
+.....
+
+// Check if stack a is sorted
+ ....
+
+Algorithm: Quicksort, radix or turk.
+
+
+
+
+
+
+
+
+// 
+# Push Swap Project Steps
+
+## Initialization
+1. Declare pointers to 2 linked lists: `t_stack_node *a` and `t_stack_node *b`
+2. Set both pointers to NULL
+3. Validate command line arguments
+    - Check for empty input (`argc == 1` or `(argc == 2 && !argv[1][0])`)
+    - Handle single string input with spaces (`argc == 2` → use `ft_split()`)
+
+## Stack Setup
+1. Parse arguments and build stack A
+    - Convert strings to integers using custom `ft_atol()`
+    - Check for integer overflow/underflow
+    - Check for duplicates
+    - Add valid numbers to stack A
+
+## Sorting Logic
+1. Check if stack A is already sorted
+2. Choose sorting algorithm based on stack size:
+    - 2 elements: single `sa` operation if needed
+    - 3 elements: use optimized `tiny_sort`
+    - 4-5 elements: use simple algorithm with strategic stack B insertions
+    - Larger stacks: implement radix sort or quicksort variant
+
+## Sorting Operations
+1. Implement all required operations:
+    - `sa`, `sb`, `ss`: swap top two elements
+    - `pa`, `pb`: push top element from one stack to the other
+    - `ra`, `rb`, `rr`: rotate (move top to bottom)
+    - `rra`, `rrb`, `rrr`: reverse rotate (move bottom to top)
+2. Make sure each operation outputs its name when performed
+
+## Optimization
+1. Minimize the number of operations used
+2. Implement helper functions to analyze stack state
+3. Choose best operations based on stack configuration
+
+## Cleanup
+1. Free all allocated memory (stack nodes, split strings)
+2. Handle edge cases and errors gracefully

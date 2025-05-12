@@ -1,0 +1,37 @@
+- remove ft_split.c and split.c in /src (when project is working) -> done
+- do push_commands, and the other commands, swap commands should be ok.
+- left at sort_stacks.c and beyond. 34
+        16h50 19th april
+
+-----------------------------------------------------------------------------
+
+- do revrotate and rotate.
+        - practice with test and debugs prints on all commands
+- do sort_stacks
+- check int_b_to_a and a_to_b
+
+        26th april 22:27
+
+-----------------------------------------------------------------------------
+
+ - stack_init.c
+        do prep_for_push (review!)
+        do get_cheapest. done
+
+ - stack_utils.c
+        do find_min, done
+        do find_max, done
+        do stack_len (check to see if there's already that function in my libft and if it suited for this) -> I will use the one from my libft.
+
+
+---------------------------------------
+
+commands_push.c -> should be good
+commands_rev_rotate.c -> done
+commands_rotate.c -> to do
+commands_swap.c -> done
+
+sort_stacks -> to do
+init_a_to_b -> to do
+init_b_to_a -> to do
+
