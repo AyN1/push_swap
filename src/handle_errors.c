@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 15:32:23 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/11 01:37:27 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/16 10:06:01 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ int	error_syntax(char *str_n)
 int	error_duplicate(t_stack_node *a, int n) //Define a function that checks for duplicate input numbers in stack `a`
 {
 	if (!a) //Check for an empty stack
-	{
-		ft_printf("debug1\n");
 		return (0);
-	}
 	while (a) //Loop until the end of stack `a` is reached
 	{
 		if (a->nbr == n) //Check if the current node's value is equal to `n`. Refer to `init_stack_a()`

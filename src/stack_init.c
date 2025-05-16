@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:30:30 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/11 01:28:21 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/16 10:36:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,17 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name
 		if (stack_name == 'a') //If not, and it is stack `a`, execute the following
 		{
 			if (top_node->above_median)
-				ra(stack, false);
+				ra(stack, true);
 			else
-				rra(stack, false);
+				rra(stack, true);
 			}
 			else if (stack_name == 'b') //If not, and it is stack `b`, execute the following
 			{
 				if (top_node->above_median)
-					rb(stack, false);
+					rb(stack, true);
 				else
-					rrb(stack, false);
+					rrb(stack, true);
 		}
 	}
 }
+

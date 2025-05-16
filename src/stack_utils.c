@@ -6,11 +6,26 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 10:21:51 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/11 01:27:44 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/16 10:38:02 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	stack_len(t_stack_node *stack) //Define a function that calculates and returns the length of a stack
+{
+	int	count; //To store the node count
+
+	if (!stack)
+		return (0);
+	count = 0;
+	while (stack) //Loop until the end of the stack is reached
+	{
+		stack = stack->next; //Move to the next node
+		count++;
+	}
+	return (count);
+}
 
 bool    stack_sorted(t_stack_node *stack) // 32m
 {

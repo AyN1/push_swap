@@ -19,8 +19,15 @@ LIBFT_DIR   = libft/
 SRC_FILES   = main.c \
               stack_init.c \
               handle_errors.c \
-              stack_utils.c
-
+              stack_utils.c \
+			  init_a_to_b.c \
+			  init_b_to_a.c \
+			  commands_push.c \
+			  commands_swap.c \
+			  commands_rotate.c \
+			  commands_rev_rotate.c \
+			  sort_three.c \
+			  sort_stacks.c
 # **************************************************************************** #
 #                               DERIVED VARIABLES                              #
 # **************************************************************************** #

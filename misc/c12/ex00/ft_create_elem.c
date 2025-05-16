@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/19 13:58:49 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:36:04 by atbicer          ###   ########.fr       */
+/*   Created: 2025/05/16 09:26:58 by atbicer           #+#    #+#             */
+/*   Updated: 2025/05/16 09:29:26 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "ft_list.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-void    sort_three(t_stack_node **a) // 33m
+t_list *ft_create_elem(void *data)
 {
-    t_stack_node    *biggest_node;
+	t_list *new_elem;
 
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, true);
-    else if ((*a)->next == biggest_node)
-        rra(a, true);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, true);
+	new_elem = malloc(sizeof(t_list));
+	if (new_elem == NULL)
+		return (NULL);
+	new_elem->data = data;
+	new_elem->next = NULL;
+	return (new_elem);
 }

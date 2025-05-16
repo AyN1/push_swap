@@ -28,7 +28,7 @@
 
 commands_push.c -> should be good
 commands_rev_rotate.c -> done
-commands_rotate.c -> to do
+commands_rotate.c -> to do  --> got an issue with this before.
 commands_swap.c -> done
 
 sort_stacks -> to do

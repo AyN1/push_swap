@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atbicer <atbicer@student.42.fr>            +#+  +:+       +#+        */
+/*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/03 15:06:47 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/16 10:35:34 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,23 @@ int	main(int argc, char *argv[])
 	// init stack
 	(void)b; // to remove
 	stack_init(&a, argv); // no need to send argv+1 as the first arg is already skipped.
-	// if (!stack_sorted(a))
-	// {
-	// 	if (stack_len(a) == 2)
-	// 		sa(&a, false);
-	// 	else if (stack_len(a) == 3)
-	// 		// tiny sort function
-	// 		sort_three(&a);
-	// 	else
-	// 	// turk algo
-	// 	 sort_stacks(&a, &b);
-	// }
-	// free stack
-	
-	// Debug, print A stack	
+	if (!stack_sorted(a))
+	{
+		if (stack_len(a) == 2)
+			sa(&a, true);
+		else if (stack_len(a) == 3)
+			// tiny sort function
+			sort_three(&a);
+		else
+		// turk algo
+		 sort_stacks(&a, &b);
+	}
+
+	// Debug, print A stack
+	/*
 	for (; a; a = a->next)
    	 ft_printf("[%d] ", a->nbr);
-	
-	free_stack(&a);
+	*/
 
+	free_stack(&a);
 }

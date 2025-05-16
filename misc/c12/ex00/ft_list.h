@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/19 13:58:49 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:36:04 by atbicer          ###   ########.fr       */
+/*   Created: 2025/05/16 09:27:03 by atbicer           #+#    #+#             */
+/*   Updated: 2025/05/16 09:27:30 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
-
-void    sort_three(t_stack_node **a) // 33m
+typedef struct s_list
 {
-    t_stack_node    *biggest_node;
-
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, true);
-    else if ((*a)->next == biggest_node)
-        rra(a, true);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, true);
-}
+	struct s_list *next;
+	void *data;
+} t_list;
