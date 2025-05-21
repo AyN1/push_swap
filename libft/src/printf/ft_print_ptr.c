@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:32:50 by atbicer           #+#    #+#             */
-/*   Updated: 2024/06/26 14:04:48 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/21 09:22:02 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	ft_print_ptr(unsigned long long ptr)
 	if (!ptr)
 		count += write(1, "0", 1);
 	else
-	{
 		count += ft_put_addr(ptr);
-	}
 	return (count);
 }

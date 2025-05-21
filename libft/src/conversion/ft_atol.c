@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atbicer <atbicer@student.42.fr>            +#+  +:+       +#+        */
+/*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:24:57 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/03 15:25:39 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/13 05:03:56 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atol(const char *str) // don't handle overflow and underflow as the original.
+/* don't handle overflow and underflow as the original. */
+long	ft_atol(const char *str)
 {
 	int		i;
 	long	nb;

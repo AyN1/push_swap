@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: atbicer <atbicer@student.42.fr>            +#+  +:+       +#+         #
+#    By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 04:40:04 by atbicer           #+#    #+#              #
-#    Updated: 2025/05/11 00:30:27 by atbicer          ###   ########.fr        #
+#    Updated: 2025/05/13 05:27:44 by atbicer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,16 +51,32 @@ SRCS = $(addprefix $(SRC_DIR)/char/, $(SRC_CHAR)) \
 # Object files
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
+# Progress bar variables
+TOTAL_FILES := $(words $(SRCS))
+CURRENT_FILE := 0
+BAR_LENGTH := 30
+
+# Progress bar function - use with $(call progress_bar,filename)
+define progress_bar
+    $(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE) + 1))))
+    $(eval PERCENTAGE=$(shell echo $$(($(CURRENT_FILE) * 100 / $(TOTAL_FILES)))))
+    $(eval IS_LAST=$(shell if [ $(CURRENT_FILE) -eq $(TOTAL_FILES) ]; then echo 1; else echo 0; fi))
+    $(eval HASH_COUNT=$(shell if [ $(IS_LAST) -eq 1 ]; then echo $(BAR_LENGTH); else echo $$(($(CURRENT_FILE) * $(BAR_LENGTH) / $(TOTAL_FILES))); fi))
+    $(eval SPACE_COUNT=$(shell echo $$(($(BAR_LENGTH) - $(HASH_COUNT)))))
+    @printf "\r[%-$(BAR_LENGTH)s] %3d%% (%d/%d) %-20s" "$$(printf '%0.s#' $$(seq 1 $(HASH_COUNT)))" $(PERCENTAGE) $(CURRENT_FILE) $(TOTAL_FILES) "$(1)"
+endef
+
 # Rules
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "$(GREEN)Building libft...$(RESET)"
+	@echo "\n$(GREEN)Building libft...$(RESET)"
 	@ar rcs $(NAME) $(OBJS)
 	@echo "$(GREEN)libft compiled$(RESET)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
+	@$(call progress_bar,$(notdir $<))
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
