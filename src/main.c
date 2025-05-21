@@ -6,13 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:35:34 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/21 10:40:03 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-char **split(char *s, char c);
 
 int	main(int argc, char *argv[])
 {
@@ -51,7 +49,7 @@ int	main(int argc, char *argv[])
 	// Debug, print A stack
 	/*
 	for (; a; a = a->next)
-   	 ft_printf("[%d] ", a->nbr);
+		ft_printf("[%d] ", a->nbr);
 	*/
 
 	free_stack(&a);
