@@ -1,3 +1,8 @@
 *.o
 a.out
 *.a
+*checker*
+*test*
+*output*
+*traces*
+Push-Swap-Tester/
