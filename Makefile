@@ -50,7 +50,7 @@ all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJS)
 	@echo "$(GREEN)Building push_swap...$(RESET)"
-	@$(CC) $(OBJS) $(LIBFT) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)Done!$(RESET)"
 
 clean:
