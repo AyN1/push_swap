@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 12:26:13 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:03:44 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 19:07:26 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,11 @@ void			pb(t_stack_node **b, t_stack_node **a, bool print);
 // algorithms
 void			sort_three(t_stack_node **a);
 void			sort_stacks(t_stack_node **a, t_stack_node **b); //Turk algorithm
+
+//rotate stacks
+void	rotate_both(t_stack_node **a, t_stack_node **b,
+	t_stack_node *cheapest_node);
+void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
+	t_stack_node *cheapest_node);
 
 #endif

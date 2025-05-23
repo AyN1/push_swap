@@ -27,7 +27,8 @@ SRC_FILES   = main.c \
 			  commands_rotate.c \
 			  commands_rev_rotate.c \
 			  sort_three.c \
-			  sort_stacks.c
+			  sort_stacks.c \
+			  rotate_stacks.c
 # **************************************************************************** #
 #                               DERIVED VARIABLES                              #
 # **************************************************************************** #
