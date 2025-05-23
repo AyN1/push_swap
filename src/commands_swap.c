@@ -6,11 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:58:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:35:03 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static void	swap(t_stack_node **head)
 {

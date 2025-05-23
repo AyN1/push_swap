@@ -6,11 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 13:58:49 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/22 13:15:35 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	sort_three(t_stack_node **a) // 33m
 {

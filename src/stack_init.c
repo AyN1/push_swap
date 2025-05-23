@@ -6,14 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:30:30 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/22 13:11:50 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:15:02 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "push_swap.h"
 
 static void	append_node(t_stack_node **stack, int n)
 {

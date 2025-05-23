@@ -6,11 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 10:21:51 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/22 13:09:01 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	stack_len(t_stack_node *stack)
 {

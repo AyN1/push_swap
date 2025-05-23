@@ -6,11 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 08:50:09 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	main(int argc, char *argv[])
 {
@@ -26,6 +26,8 @@ int	main(int argc, char *argv[])
 	else
 		argv++;
 	stack_init(&a, argv);
+	for (t_stack_node *temp = a; temp; temp = temp->next)
+		ft_printf("[%d] ", temp->nbr);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
@@ -35,6 +37,8 @@ int	main(int argc, char *argv[])
 		else
 			sort_stacks(&a, &b);
 	}
+	for (t_stack_node *temp = a; temp; temp = temp->next)
+		ft_printf("[%d] ", temp->nbr);
 	free_stack(&a);
 }
 

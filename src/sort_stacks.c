@@ -6,11 +6,11 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:06:38 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/22 13:22:28 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h" // 34m // last
+#include "push_swap.h" // 34m // last
 
 static void	rotate_both(t_stack_node **a, t_stack_node **b,
 		t_stack_node *cheapest_node)
