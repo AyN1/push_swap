@@ -6,146 +6,146 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 10:21:51 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/16 10:38:02 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/22 13:09:01 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	stack_len(t_stack_node *stack) //Define a function that calculates and returns the length of a stack
+int	stack_len(t_stack_node *stack)
 {
-	int	count; //To store the node count
+	int	count;
 
 	if (!stack)
 		return (0);
 	count = 0;
-	while (stack) //Loop until the end of the stack is reached
+	while (stack)
 	{
-		stack = stack->next; //Move to the next node
+		stack = stack->next;
 		count++;
 	}
 	return (count);
 }
 
-bool    stack_sorted(t_stack_node *stack) // 32m
+bool	stack_sorted(t_stack_node *stack)
 {
-    if (!stack)
-        return (1);
-    while (stack->next)
-    {
-        if (stack->nbr > stack->next->nbr)
-            return (false);
-        stack = stack->next;
-    }
-    return (true);
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
 }
 
-t_stack_node	*find_last(t_stack_node *stack) //Define a function that returns the pointer to the last node
+t_stack_node	*find_last(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
-	while (stack->next) //Loop until the end of the stack is reached
+	while (stack->next)
 		stack = stack->next;
 	return (stack);
 }
 
-t_stack_node	*find_min(t_stack_node *stack) //Define a function that searches a stack and returns the node with the smallest number
+t_stack_node	*find_min(t_stack_node *stack)
 {
-	long			min; //To store the smallest value so far
-	t_stack_node	*min_node; //To store a pointer that points to the smallest number
+	long			min;
+	t_stack_node	*min_node;
 
 	if (!stack)
 		return (NULL);
-	min = LONG_MAX; //Assign to the smallest value so far, the max long integer
-	while (stack) //Loop until the end of the stack is reached
+	min = LONG_MAX;
+	while (stack)
 	{
-		if (stack->nbr < min) //Check if the current node value is smaller than the smallest so far
+		if (stack->nbr < min)
 		{
-			min = stack->nbr; //If so, update the smallest number so far
-			min_node = stack; //Set the pointer to point to the node with the smallest number so far
+			min = stack->nbr;
+			min_node = stack;
 		}
-		stack = stack->next; //Move to the next node for processing
+		stack = stack->next;
 	}
 	return (min_node);
 }
 
-t_stack_node	*find_max(t_stack_node *stack) //Define a function that searches a stack and returns the node with the biggest number
+t_stack_node	*find_max(t_stack_node *stack)
 {
-	long			max; //To store the biggest value so far
-	t_stack_node	*max_node; //To store a pointer that points to the biggest number
+	long			max;
+	t_stack_node	*max_node;
 
 	if (!stack)
 		return (NULL);
-	max = LONG_MIN; //Assign to the biggest value so far, the max long integer
-	while (stack) //Loop until the end of the stack is reached
+	max = LONG_MIN;
+	while (stack)
 	{
-		if (stack->nbr > max) //Check if the current node value is smaller than the biggest so far
+		if (stack->nbr > max)
 		{
-			max = stack->nbr; //If so, update the biggest number so far
-			max_node = stack; //Set the pointer to point to the node with the biggest number so far
+			max = stack->nbr;
+			max_node = stack;
 		}
-		stack = stack->next; //Move to the next node for processing
+		stack = stack->next;
 	}
 	return (max_node);
 }
 /*
 
-// Add node to bottom of stack
-function add_node_bottom(stack, value):
-    new_node = malloc(sizeof(t_stack_node))
-    if new_node is NULL:
-        return
 
-    new_node->value = value
-    new_node->next = NULL
+function	add_node_bottom(stack, value):
+	new_node = malloc(sizeof(t_stack_node))
+	if new_node is NULL:
+		return
 
-    if *stack is NULL:
-        new_node->prev = NULL
-        *stack = new_node
-        return
+	new_node->value = value
+	new_node->next = NULL
 
-    // Find last node
-    last = *stack
-    while last->next is not NULL:
-        last = last->next
+	if *stack is NULL:
+		new_node->prev = NULL
+		*stack = new_node
+		return
 
-    last->next = new_node
-    new_node->prev = last
 
-// Check if stack contains duplicate value
-function contains_duplicate(stack, value):
-    current = stack
-    while current is not NULL:
-        if current->value == value:
-            return true
-        current = current->next
-    return false
+	last = *stack
+	while last->next is not NULL:
+		last = last->next
 
-// Get stack length
-function stack_len(stack):
-    count = 0
-    current = stack
-    while current is not NULL:
-        count++
-        current = current->next
-    return count
+	last->next = new_node
+	new_node->prev = last
 
-// Check if stack is sorted
-function stack_sorted(stack):
-    if stack is NULL:
-        return true
 
-    current = stack
-    while current->next is not NULL:
-        if current->value > current->next->value:
-            return false
-        current = current->next
-    return true
+function	contains_duplicate(stack, value):
+	current = stack
+	while current is not NULL:
+		if current->value == value:
+			return true
+		current = current->next
+	return false
 
-// Free stack
-function free_stack(stack):
-    while stack is not NULL:
-        temp = stack
-        stack = stack->next
-        free(temp)
+
+function	stack_len(stack):
+	count = 0
+	current = stack
+	while current is not NULL:
+		count++
+		current = current->next
+	return count
+
+
+function	stack_sorted(stack):
+	if stack is NULL:
+		return true
+
+	current = stack
+	while current->next is not NULL:
+		if current->value > current->next->value:
+			return false
+		current = current->next
+	return true
+
+
+function	free_stack(stack):
+	while stack is not NULL:
+		temp = stack
+		stack = stack->next
+		free(temp)
 		*/
