@@ -34,7 +34,7 @@ SRC_FILES   = main.c \
 OBJ_FILES   = $(SRC_FILES:.c=.o)
 OBJS        = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
 LIBFT       = $(LIBFT_DIR)libft.a
-INCLUDES    = -I$(INC_DIR) -I$(LIBFT_DIR)
+INCLUDES    = -I$(INC_DIR)
 
 # **************************************************************************** #
 #                                VISUAL OUTPUT                                 #
@@ -72,7 +72,7 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
