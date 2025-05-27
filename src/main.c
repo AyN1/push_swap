@@ -6,11 +6,24 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/27 15:54:49 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 16:29:11 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void free_split(char **argv)
+{
+	int i;
+
+	i = 0;
+while (argv[i])
+{
+	free(argv[i]);
+	++i;
+}
+free(argv);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -36,6 +49,9 @@ int	main(int argc, char *argv[])
 			sort_stacks(&a, &b);
 	}
 	free_stack(&a);
+	if (argc == 2)
+	free_split(argv);
+	return (0);
 }
 
 	/*
