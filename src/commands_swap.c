@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 10:58:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:53:28 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,21 @@ static void	swap(t_stack_node **head)
 	(*head)->prev = NULL;
 }
 
-void	sa(t_stack_node **a, bool checker)
+void	sa(t_stack_node **a)
 {
 	swap(a);
-	if (checker)
-		ft_printf("sa\n");
+	ft_printf("sa\n");
 }
 
-void	sb(t_stack_node **b, bool checker)
+void	sb(t_stack_node **b)
 {
 	swap(b);
-	if (checker)
-		ft_printf("sb\n");
+	ft_printf("sb\n");
 }
 
-void	ss(t_stack_node **a, t_stack_node **b, bool checker)
+void	ss(t_stack_node **a, t_stack_node **b)
 {
 	swap(a);
 	swap(b);
-	if (checker)
-		ft_printf("ss\n");
+	ft_printf("ss\n");
 }

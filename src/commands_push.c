@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:30:17 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:47:22 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,16 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 	}
 }
 
-void	pa(t_stack_node **a, t_stack_node **b, bool checker)
+void	pa(t_stack_node **a, t_stack_node **b)
 
 {
 	push(a, b);
-	if (checker)
-		ft_printf("pa\n");
+	ft_printf("pa\n");
 }
 
-void	pb(t_stack_node **b, t_stack_node **a, bool checker)
+void	pb(t_stack_node **b, t_stack_node **a)
 
 {
 	push(b, a);
-	if (checker)
-		ft_printf("pb\n");
+	ft_printf("pb\n");
 }

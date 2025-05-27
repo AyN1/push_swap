@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 11:30:30 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 10:15:02 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:54:12 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,16 +79,16 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack, true);
+				ra(stack);
 			else
-				rra(stack, true);
+				rra(stack);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack, true);
+				rb(stack);
 			else
-				rrb(stack, true);
+				rrb(stack);
 		}
 	}
 }

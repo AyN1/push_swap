@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 22:21:44 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 10:10:13 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:53:10 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,21 @@ static void	rotate(t_stack_node **stack)
 	last_node->next->next = NULL;
 }
 
-void	ra(t_stack_node **a, bool checker)
+void	ra(t_stack_node **a)
 {
 	rotate(a);
-	if (checker)
-		ft_printf("ra\n");
+	ft_printf("ra\n");
 }
 
-void	rb(t_stack_node **b, bool checker)
+void	rb(t_stack_node **b)
 {
 	rotate(b);
-	if (checker)
-		ft_printf("rb\n");
+	ft_printf("rb\n");
 }
 
-void	rr(t_stack_node **a, t_stack_node **b, bool checker)
+void	rr(t_stack_node **a, t_stack_node **b)
 {
 	rotate(a);
 	rotate(b);
-	if (checker)
-		ft_printf("rr\n");
+	ft_printf("rr\n");
 }

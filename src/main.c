@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 19:08:49 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:54:49 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char *argv[])
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
-			sa(&a, true);
+			sa(&a);
 		else if (stack_len(a) == 3)
 			sort_three(&a);
 		else

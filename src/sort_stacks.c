@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:06:38 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 19:06:28 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:54:27 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 		rev_rotate_both(a, b, cheapest_node);
 	prep_for_push(a, cheapest_node, 'a');
 	prep_for_push(b, cheapest_node->target_node, 'b');
-	pb(b, a, true);
+	pb(b, a);
 }
 
 static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	prep_for_push(a, (*b)->target_node, 'a');
-	pa(a, b, true);
+	pa(a, b);
 }
 
 static void	min_on_top(t_stack_node **a)
@@ -38,9 +38,9 @@ static void	min_on_top(t_stack_node **a)
 	while ((*a)->nbr != find_min(*a)->nbr)
 	{
 		if (find_min(*a)->above_median)
-			ra(a, true);
+			ra(a);
 		else
-			rra(a, true);
+			rra(a);
 	}
 }
 
@@ -50,9 +50,9 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 
 	len_a = stack_len(*a);
 	if (len_a-- > 3 && !stack_sorted(*a))
-		pb(b, a, true);
+		pb(b, a);
 	if (len_a-- > 3 && !stack_sorted(*a))
-		pb(b, a, true);
+		pb(b, a);
 	while (len_a-- > 3 && !stack_sorted(*a))
 	{
 		init_nodes_a(*a, *b);

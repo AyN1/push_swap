@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 12:26:13 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/23 19:31:29 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:53:57 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,17 @@ t_stack_node			*find_min(t_stack_node *stack);
 t_stack_node			*find_max(t_stack_node *stack);
 
 // commands
-void					sa(t_stack_node **a, bool print);
-void					sb(t_stack_node **b, bool print);
-void					ss(t_stack_node **a, t_stack_node **b, bool print);
-void					ra(t_stack_node **a, bool print);
-void					rb(t_stack_node **b, bool print);
-void					rr(t_stack_node **a, t_stack_node **b, bool print);
-void					rra(t_stack_node **a, bool print);
-void					rrb(t_stack_node **b, bool print);
-void					rrr(t_stack_node **a, t_stack_node **b, bool print);
-void					pa(t_stack_node **a, t_stack_node **b, bool print);
-void					pb(t_stack_node **b, t_stack_node **a, bool print);
+void					sa(t_stack_node **a);
+void					sb(t_stack_node **b);
+void					ss(t_stack_node **a, t_stack_node **b);
+void					ra(t_stack_node **a);
+void					rb(t_stack_node **b);
+void					rr(t_stack_node **a, t_stack_node **b);
+void					rra(t_stack_node **a);
+void					rrb(t_stack_node **b);
+void					rrr(t_stack_node **a, t_stack_node **b);
+void					pa(t_stack_node **a, t_stack_node **b);
+void					pb(t_stack_node **b, t_stack_node **a);
 
 // algorithms ; turk
 void					sort_three(t_stack_node **a);
