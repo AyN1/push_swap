@@ -6,23 +6,23 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:14:53 by atbicer           #+#    #+#             */
-/*   Updated: 2025/05/27 16:29:11 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 17:37:21 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void free_split(char **argv)
+static void	free_split(char **argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
-while (argv[i])
-{
-	free(argv[i]);
-	++i;
-}
-free(argv);
+	while (argv[i])
+	{
+		free(argv[i]);
+		++i;
+	}
+	free(argv);
 }
 
 int	main(int argc, char *argv[])
@@ -50,7 +50,7 @@ int	main(int argc, char *argv[])
 	}
 	free_stack(&a);
 	if (argc == 2)
-	free_split(argv);
+		free_split(argv);
 	return (0);
 }
 
