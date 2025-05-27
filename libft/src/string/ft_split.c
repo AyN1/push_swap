@@ -6,7 +6,7 @@
 /*   By: atbicer <atbicer@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 06:15:55 by atbicer           #+#    #+#             */
-/*   Updated: 2023/08/29 05:08:00 by atbicer          ###   ########.fr       */
+/*   Updated: 2025/05/27 16:45:05 by atbicer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,12 @@ char	**ft_split(char const *s, char c)
 // 	i = 0;
 // 	while (ret[i])
 // 		printf("[%s] ", ret[i++]);
+// 		for (int i = 0; ret[i]; i++)
+// 		{
+// 			free(ret[i]);
+// 		}
+// 		free(ret);
+// 		return (0);
 // }
 
 /*
